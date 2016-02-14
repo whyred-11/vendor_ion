@@ -106,6 +106,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/ion/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/ion/overlay/common
 
+# OmniStyle
+PRODUCT_PACKAGES += \
+    OmniStyle \
+
 # PixelSetupWizard overlay
 PRODUCT_PACKAGES += \
     PixelSetupWizardOverlay \
