@@ -115,6 +115,10 @@ PRODUCT_PACKAGES += \
     PixelSetupWizardOverlay \
     PixelSetupWizardAodOverlay
 
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUIGoogle
+
 # Sqlite
 PRODUCT_PACKAGES += \
     sqlite3
