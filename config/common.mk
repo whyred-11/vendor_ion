@@ -82,6 +82,11 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
+
 # Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.exfat \
@@ -90,6 +95,7 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     mkfs.ntfs \
     mount.ntfs
+
 # FOD
 ifeq ($(EXTRA_FOD_ANIMATIONS),true)
 DEVICE_PACKAGE_OVERLAYS += vendor/ion/overlay/fod
