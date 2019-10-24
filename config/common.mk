@@ -73,6 +73,10 @@ $(foreach f,$(wildcard vendor/ion/prebuilt/common/etc/init/*.rc),\
 PRODUCT_COPY_FILES += \
     vendor/ion/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
 
+# Enable Android Beam on all targets
+PRODUCT_COPY_FILES += \
+    vendor/ion/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
+
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
