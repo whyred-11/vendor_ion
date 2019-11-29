@@ -62,7 +62,8 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/ion/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
     vendor/ion/config/permissions/privapp-permissions-fm.xml:system/etc/permissions/privapp-permissions-fm.xml \
-    vendor/ion/config/permissions/org.lineageos.snap.xml:system/etc/permissions/org.lineageos.snap.xml
+    vendor/ion/config/permissions/privapp-permissions-snap.xml:system/etc/permissions/privapp-permissions-snap.xml \
+    vendor/ion/config/permissions/privapp-permissions-camera2.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-camera2.xml
 
 # Copy all ion-OS-specific init rc files
 $(foreach f,$(wildcard vendor/ion/prebuilt/common/etc/init/*.rc),\
