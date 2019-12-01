@@ -61,7 +61,7 @@ endif
 # Some permissions
 PRODUCT_COPY_FILES += \
     vendor/ion/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
-    vendor/ion/config/permissions/privapp-permissions-aosp.xml:system/etc/permissions/privapp-permissions-aosp.xml \
+    vendor/ion/config/permissions/privapp-permissions-fm.xml:system/etc/permissions/privapp-permissions-fm.xml \
     vendor/ion/config/permissions/org.lineageos.snap.xml:system/etc/permissions/org.lineageos.snap.xml
 
 # Copy all ion-OS-specific init rc files
