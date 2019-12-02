@@ -61,6 +61,7 @@ endif
 # Some permissions
 PRODUCT_COPY_FILES += \
     vendor/ion/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
+    vendor/ion/config/permissions/privapp-permissions-ion.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-ion.xml \
     vendor/ion/config/permissions/privapp-permissions-fm.xml:system/etc/permissions/privapp-permissions-fm.xml \
     vendor/ion/config/permissions/privapp-permissions-snap.xml:system/etc/permissions/privapp-permissions-snap.xml \
     vendor/ion/config/permissions/privapp-permissions-camera2.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-camera2.xml
