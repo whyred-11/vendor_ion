@@ -3,8 +3,7 @@ ifeq ($(ION_BUILD_TYPE), OFFICIAL)
 ION_OTA_VERSION_CODE := ten
 
 CUSTOM_PROPERTIES += \
-    ro.ion.ota.version_code=$(ION_OTA_VERSION_CODE) \
-    sys.ota.disable_uncrypt=1
+    ro.ion.ota.version_code=$(ION_OTA_VERSION_CODE)
 
 PRODUCT_PACKAGES += \
     Updates
