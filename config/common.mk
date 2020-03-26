@@ -106,6 +106,12 @@ DEVICE_PACKAGE_OVERLAYS += vendor/ion/overlay/common
 PRODUCT_PACKAGES += \
     OmniStyle \
 
+# OTA
+ifneq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.ota.allow_downgrade=true
+endif
+
 # PixelSetupWizard overlay
 PRODUCT_PACKAGES += \
     PixelSetupWizardOverlay \
