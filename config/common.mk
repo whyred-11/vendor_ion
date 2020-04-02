@@ -99,6 +99,10 @@ DEVICE_PACKAGE_OVERLAYS += vendor/ion/overlay/fod
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/ion/overlay/fod
 endif
 
+# Long Screenshot
+PRODUCT_PACKAGES += \
+    StitchImage
+
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
