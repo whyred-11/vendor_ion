@@ -30,10 +30,6 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-# Ambient Play
-#PRODUCT_PACKAGES += \
-#    AmbientPlayHistoryProvider
-
 # Some permissions
 PRODUCT_COPY_FILES += \
     vendor/ion/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
