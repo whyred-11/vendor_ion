@@ -5,9 +5,9 @@ ION_RELEASE_TYPE ?= Preview
 ION_PLATFORM_VERSION := 10.0
 
 ifeq ($(ION_RELEASE_TYPE), Release)
-    IONIZER := 2.4.a
+    IONIZER := 2.5.a
 else
-    IONIZER := 2.4.b
+    IONIZER := 2.5.b
 endif
 
 TARGET_PRODUCT_SHORT := $(subst ion_,,$(ION_BUILD))
