@@ -1,6 +1,6 @@
 # Copyright (C) 2012 The CyanogenMod Project
 #           (C) 2017 The LineageOS Project
-#           (C) 2019 The ion-OS Project
+#           (C) 2020 The ion-OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -197,11 +197,16 @@ PATH_OVERRIDE += $(TOOLS_PATH_OVERRIDE)
 
 KERNEL_ADDITIONAL_CONFIG_OUT := $(KERNEL_OUT)/.additional_config
 
+# Define custom ccache dir for kernel
+ifneq ($(KERNEL_CCACHE_DIR),)
+    KERNEL_CCACHE := CCACHE_DIR="$(KERNEL_CCACHE_DIR)"
+endif
+
 # Internal implementation of make-kernel-target
 # $(1): output path (The value passed to O=)
 # $(2): target to build (eg. defconfig, modules, dtbo.img)
 define internal-make-kernel-target
-$(PATH_OVERRIDE) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(KERNEL_SRC) O=$(KERNEL_BUILD_OUT_PREFIX)$(1) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) $(2)
+    $(PATH_OVERRIDE) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(KERNEL_SRC) O=$(KERNEL_BUILD_OUT_PREFIX)$(1) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CCACHE) $(KERNEL_CC) $(2)
 endef
 
 # Make a kernel target
