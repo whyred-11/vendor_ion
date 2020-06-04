@@ -161,6 +161,6 @@ include vendor/overlays/config.mk
 include vendor/ion/prebuilt/common/fonts/fonts.mk
 
 # Customization
-include vendor/google-customization/config.mk
+include vendor/google/customization/config.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
