@@ -2,7 +2,7 @@
 ION_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M)
 ION_BUILD_TYPE ?= UNOFFICIAL
 ION_RELEASE_TYPE ?= Preview
-IONIZER := 2.8.a
+IONIZER := 2.9.a-EOL
 
 TARGET_PRODUCT_SHORT := $(subst ion_,,$(ION_BUILD))
 
